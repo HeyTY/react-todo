@@ -21,12 +21,16 @@ module.exports = {
 		filename: "./public/bundle.js"
 	},
 	resolve: {
-		root: __dirname,
-		alias: {
-			applicationStyles: "app/styles/app.scss"
-		},
-		extensions: ["",".js",".jsx"]
-	},
+    root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './app/components'
+    ],
+    alias: {
+      applicationStyles: 'app/styles/app.scss'
+    },
+    extensions: ['', '.js', '.jsx']
+  },
 	module: {
 		loaders: [
 			{
